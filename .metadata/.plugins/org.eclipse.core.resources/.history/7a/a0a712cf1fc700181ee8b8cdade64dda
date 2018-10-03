@@ -1,0 +1,5 @@
+package com.qa.mySpringBootDatabase.repository;
+
+public class MySpringBootRepository {
+
+}

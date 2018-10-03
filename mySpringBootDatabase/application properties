@@ -1,0 +1,12 @@
+## Spring Datasource -This is the connection to the database. Set this as you would in the
+## JDBC
+## Hibernate properties
+## Dialect - this is set for MySQL version 5. It makes the SQL tailored to the particular
+## instances you use
+## Hibernate ddl auto
+## There are 4 options
+## Create, Create-Drop, Validate, Update – When we define a data model it will create the
+## table we need in the database and map the fields we need to columns inside the table
+## If we change the model at all it will update the table to reflect these changes.
+## In this example we are going to use update but in a production environment we should
+## be using management tools to control this for us for safety reasons.

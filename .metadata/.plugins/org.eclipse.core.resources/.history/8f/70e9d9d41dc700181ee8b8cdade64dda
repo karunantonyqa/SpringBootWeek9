@@ -1,0 +1,12 @@
+package com.qa.mySpringBootDatabase;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MySpringBootDatabaseApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MySpringBootDatabaseApplication.class, args);
+	}
+}

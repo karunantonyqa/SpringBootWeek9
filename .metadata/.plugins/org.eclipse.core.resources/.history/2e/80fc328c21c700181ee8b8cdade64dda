@@ -1,0 +1,5 @@
+package com.qa.mySpringBootDatabase.controller;
+
+public class MySpringBootDataController {
+
+}

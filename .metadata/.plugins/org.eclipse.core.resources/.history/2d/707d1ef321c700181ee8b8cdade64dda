@@ -1,0 +1,25 @@
+package com.qa.mySpringBootDatabase.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.qa.mySpringBootDatabase.repository.MySpringBootRepository;
+
+@RestController
+@RequestMapping("api")
+public class MySpringBootDataController {
+	
+	@Autowired
+	MySpringBootRepository myRepo;
+	
+	//method create person
+	
+	//method get person
+	
+	//method get all people
+	
+	//method update person
+	
+	//method remove person
+}

@@ -1,0 +1,45 @@
+package com.qa.mySpringBootDatabase.controller;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.qa.mySpringBootDatabase.exception.ResourceNotFoundException;
+import com.qa.mySpringBootDatabase.model.MySpringBootDataModel;
+import com.qa.mySpringBootDatabase.repository.MySpringBootRepository;
+
+@RestController
+@RequestMapping("api")
+public class MySpringBootDataController {
+	
+	@Autowired
+	MySpringBootRepository myRepo;
+	
+	//method create person
+	@PostMapping("/MySpringDataModel")
+	public MySpringBootDataModel createPerson(@Valid @RequestBody MySpringBootDataModel mSDM) {
+		return myRepo.save(mSDM);
+	}
+	
+	//method get person
+	@GetMapping("personn/{id}")
+	public MySpringBootDataModel getPersonbyID(@PathVariable(value = "id")Long personID) {
+		return myRepo.findById(personID).orElseThrow(()-> new ResourceNotFoundException("MySpringBootDataModel","id",personID));
+	}
+	
+	//method get all people
+	@GetMapping("/person")
+	public List<mySpringDataModel> getAllPeople(){
+		return myRepo.findAll();
+	}
+	
+	//method update person
+	
+	//method remove person
+}
