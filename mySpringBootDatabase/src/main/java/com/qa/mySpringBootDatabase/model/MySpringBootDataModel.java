@@ -74,6 +74,15 @@ public class MySpringBootDataModel {
 	private Date lastModified;
 	
 
+	public MySpringBootDataModel(String name, String address, int age) {
+		this.name = name;
+		this.address = address;
+		this.age = age;
+	}
+	
+	public MySpringBootDataModel() {
+
+	}
 	
 	public Long getId() {
 		return id;

@@ -8,6 +8,7 @@ import com.qa.mySpringBootDatabase.model.*;
 @Repository
 public interface MySpringBootRepository extends JpaRepository<MySpringBootDataModel,Long> {
 	
-	
+	public MySpringBootDataModel findByName(String name);
 
 }
+
