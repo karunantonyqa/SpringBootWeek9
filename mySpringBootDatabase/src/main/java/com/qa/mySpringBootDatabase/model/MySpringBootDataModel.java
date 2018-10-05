@@ -45,7 +45,7 @@ length, nullable, updateable etc.
  */
 
 @Entity
-@Table
+@Table(name = "person")
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = {"creationDate","lastModified"}, allowGetters = true)
 
